@@ -1,12 +1,9 @@
-from language_processing import LanguageProcessingService
-from subscription_service import SubscriptionService
+from services.subscription_service import SubscriptionService
 
 
 def main():
-    response = SubscriptionService.get_subscription_list()
-    lang = LanguageProcessingService.detect_channel_language(
-        SubscriptionService.pop_channel(response)
-    )
+    channels = SubscriptionService.get_subscription_list()
+    # activities = SubscriptionService.get_activity_list()
 
 
 if __name__ == "__main__":
