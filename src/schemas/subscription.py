@@ -1,3 +1,6 @@
+import json
+from typing import List
+
 from langdetect import detect
 
 
@@ -10,8 +13,9 @@ class Subscription:
         self._language: str = (
             "" if self._description == "" else detect(self._description)
         )
-
-        print(self)
+        self._labels: List = []
+        self._labels.append(self._language)
+        self._last_watched = None
 
     def __str__(self):
         s = ""
@@ -21,14 +25,25 @@ class Subscription:
         s += "channel id: " + self._channel_id + "\n"
         return s
 
+    def toJSON(self):
+        return json.dumps(self, default=lambda o: o.__dict__, sort_keys=True, indent=4)
+
     @property
-    def title(self):
+    def title(self) -> str:
         return self._title
 
     @property
-    def description(self):
+    def description(self) -> str:
         return self._description
 
     @property
-    def thumbnails(self):
+    def thumbnails(self) -> dict:
         return self._thumbnails
+
+    @property
+    def labels(self) -> List:
+        return self._labels
+
+    # TODO
+    def _update_last_watched(self):
+        pass
