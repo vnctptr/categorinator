@@ -12,10 +12,16 @@ from langdetect import DetectorFactory
 DetectorFactory.seed = 0
 ```
 
-Python version: 3.9.7
+To add to readme:
 
-in pycharm mark all dirs as sources root
+- Python version: 3.9.7
+
+- in pycharm mark all dirs as sources root
 
 
-contentDetails.newItemCount	unsigned integer
-The number of new items in the subscription since its content was last read.
+To do ~ functionality:
+
+ - contentDetails.newItemCount	unsigned integer = The number of new items in the subscription since its content was last read.
+ 
+ - categorize / suggest videos based on the level of en/fr/it/cat/fr (A1-C2)
+ 
