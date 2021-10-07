@@ -4,6 +4,11 @@ from typing import List
 from langdetect import detect
 
 
+class Labels:
+    languages = ["pl", "fr", "en", "es", "cat", "it"]
+    categories = ["languages", "tech", "science", "education", "entertainment", "other"]
+
+
 class Subscription:
     def __init__(self, channel):
         self._title: str = channel["snippet"]["title"]
