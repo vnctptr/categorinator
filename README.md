@@ -23,9 +23,9 @@ To do ~ functionality:
 
  - [x] Auto label channels with language
 
- - [ ] contentDetails.newItemCount	unsigned integer = The number of new items in the subscription since its content was last read.
+ - [x] contentDetails.newItemCount	unsigned integer = The number of new items in the subscription since its content was last read.
  
- - [ ] categorize / suggest videos based on the level of en/fr/it/cat/fr (A1-C2)
+ - [x] categorize / suggest videos based on the level of en/fr/it/cat/fr (A1-C2)
   
  - [ ] auto enable language learning extension for fr/sp/ita channels
 
